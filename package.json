@@ -1,39 +1,42 @@
 {
 	"name": "district",
-	"description": "District website",
 	"version": "0.0.1",
-	"author": "Niels Bik <hey@nielsbik.nl>",
-	"dependencies": {
-		"bulma": "^0.6.0",
-		"gatsby": "^1.9.213",
-		"gatsby-link": "^1.6.37",
-		"gatsby-plugin-netlify-cms": "^1.0.9",
-		"gatsby-plugin-react-helmet": "^2.0.5",
-		"gatsby-plugin-sass": "^1.0.17",
-		"gatsby-plugin-sharp": "^1.6.34",
-		"gatsby-remark-images": "^1.5.50",
-		"gatsby-source-filesystem": "^1.5.23",
-		"gatsby-transformer-remark": "^1.7.33",
-		"gatsby-transformer-sharp": "^1.6.21",
-		"lodash": "^4.17.5",
-		"lodash-webpack-plugin": "^0.11.4",
-		"prop-types": "^15.6.0",
-		"react": "^16.2.0",
-		"react-helmet": "^5.2.0"
-	},
+	"description": "District website",
+	"homepage": "https://district.netlify.com",
+	"bugs": "https://github.com/nielsrowinbik/district",
 	"license": "MIT",
-	"main": "n/a",
+	"author": "Niels Bik <hey@nielsbik.nl> (https://nielsbik.nl)",
+	"repository": "nielsrowinbik/district",
 	"scripts": {
-		"start": "npm run develop",
+		"dev": "gatsby develop --port 8080",
 		"build": "gatsby build",
-		"dev": "gatsby develop",
-		"lint": "eslint src",
-		"serve": "gatsby serve",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"serve": "gatsby serve"
 	},
 	"devDependencies": {
 		"eslint": "^4.19.1",
 		"eslint-config-synacor": "^3.0.1"
+	},
+	"dependencies": {
+		"gatsby": "^1.9.250",
+		"gatsby-link": "^1.6.40",
+		"gatsby-plugin-catch-links": "^1.0.19",
+		"gatsby-plugin-google-analytics": "^1.0.31",
+		"gatsby-plugin-lodash": "^1.0.11",
+		"gatsby-plugin-manifest": "^1.0.20",
+		"gatsby-plugin-netlify-cms": "^2.0.1",
+		"gatsby-plugin-preact": "^1.0.17",
+		"gatsby-plugin-react-helmet": "^2.0.10",
+		"gatsby-plugin-sitemap": "^1.2.22",
+		"gatsby-plugin-styled-components": "^2.0.11",
+		"gatsby-source-filesystem": "^1.5.31",
+		"gatsby-transformer-remark": "^1.7.40",
+		"lodash": "^4.17.5",
+		"netlify-cms": "^1.5.0",
+		"react": "^16.3.1",
+		"react-dom": "^16.3.1",
+		"react-helmet": "^5.2.0",
+		"styled-components": "^3.2.5",
+		"typeface-aleo": "^0.0.44"
 	},
 	"eslintConfig": {
 		"extends": "eslint-config-synacor"

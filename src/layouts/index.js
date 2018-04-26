@@ -1,20 +1,36 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import 'typeface-aleo';
+import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import Navigation from '../components/Navigation';
+import { injectGlobal } from 'styled-components';
+import { global } from '../mixins';
+import Link from 'gatsby-link';
 
-import Navbar from '../components/Navbar';
-import './all.sass';
+injectGlobal`${global}`;
 
-const TemplateWrapper = ({ children }) => (
-	<div>
-		<Helmet title="Home | Gatsby + Netlify CMS" />
-		<Navbar />
-		<div>{children()}</div>
-	</div>
-);
+class TemplateWrapper extends Component {
+	state = {}
 
-TemplateWrapper.propTypes = {
-	children: PropTypes.func
-};
+	render = () => {
+		const { children } = this.props;
+		const {} = this.state;
+
+		return (
+			<div id="app">
+				<Helmet
+					defaultTitle="District - Brood & Koffie"
+					titleTemplate="%s - District"
+				/>
+				<Navigation>
+					<Link to="/brood">Brood</Link>
+					<Link to="/koffie">Koffie</Link>
+					<Link to="/over">Over</Link>
+					<Link to="/contact">Contact</Link>
+				</Navigation>
+				{ children() }
+			</div>
+		);
+	}
+}
 
 export default TemplateWrapper;
